@@ -1,11 +1,12 @@
 import { Country } from "../../../types";
+import { BorderCountry } from "../../atoms/BorderCountry";
 import { CountryDetail } from "../../atoms/CountryDetail";
 import styles from "./CountryDetails.module.scss";
 
 const DetailsColumn: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  return <div className={styles.detailsRow}>{children}</div>;
+  return <div className={styles.detailsColumn}>{children}</div>;
 };
 
 type CountryDetailsProps = {
@@ -24,28 +25,33 @@ export const CountryDetails: React.FC<CountryDetailsProps> = ({ data }) => {
           <DetailsColumn>
             <CountryDetail data={data?.nativeName} name="Native Name" />
             <CountryDetail data={data?.population} name="Population" />
+            <CountryDetail data={data?.region} name="Region" />
+            <CountryDetail data={data?.subregion} name="Sub Region" />
+            <CountryDetail data={data?.capital} name="Capital" />
           </DetailsColumn>
           <DetailsColumn>
             <CountryDetail
               data={data?.topLevelDomain}
               name="Top Level Domain"
             />
+            <CountryDetail
+              data={data?.currencies?.map((currency) => currency.name)}
+              name="Currencies"
+            />
+            <CountryDetail
+              data={data?.languages.map((language) => language.name)}
+              name="Languages"
+            />
           </DetailsColumn>
         </div>
-        {/* <DetailsRow>
-          <CountryDetail data={data?.population} name="Population" />
-          <CountryDetail
-            data={data?.currencies?.map((currency) => currency.name)}
-            name="Currencies"
-          />
-        </DetailsRow>
-        <DetailsRow>
-          <CountryDetail data={data?.region} name="Region" />
-          <CountryDetail
-            data={data?.languages.map((language) => language.name)}
-            name="Languages"
-          />
-        </DetailsRow> */}
+        <div className={styles.borderCountriesContainer}>
+          <CountryDetail name="Border Countries" />
+          <div className={styles.borderCountries}>
+            {data?.borders?.map((border) => {
+              return <BorderCountry to={border} name={border} />;
+            })}
+          </div>
+        </div>
       </section>
     </article>
   );

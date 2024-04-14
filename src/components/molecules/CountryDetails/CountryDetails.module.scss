@@ -1,15 +1,38 @@
+@import "../../../assets/styles/variables.scss";
+
 .detailsContainer {
   display: flex;
   align-items: center;
   gap: 120px;
+
+  @include for-laptop {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .detailsSection {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 598px;
+
+  @include for-laptop {
+    padding: 0 20px;
+  }
+}
+
+.flag {
+  height: 400px;
+  width: 560px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .detailsColumns {
   display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
   justify-content: space-between;
 }
 
@@ -25,9 +48,16 @@
   font-size: 32px;
 }
 
-.flag {
-  height: 400px;
-  width: 560px;
-  border-radius: 5px;
-  object-fit: cover;
+.borderCountriesContainer {
+  margin-top: 68px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.borderCountries {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
