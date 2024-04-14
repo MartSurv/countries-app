@@ -1,0 +1,32 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 336px;
+  width: 264px;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 2.94%);
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.flag {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.countryInfoSection {
+  padding: 24px;
+}
+
+.countryTitle {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

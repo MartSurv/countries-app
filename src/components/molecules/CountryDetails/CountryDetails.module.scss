@@ -1,0 +1,33 @@
+.detailsContainer {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.detailsSection {
+  flex-grow: 1;
+}
+
+.detailsColumns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detailsTitle {
+  margin-bottom: 23px;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.flag {
+  height: 400px;
+  width: 560px;
+  border-radius: 5px;
+  object-fit: cover;
+}
