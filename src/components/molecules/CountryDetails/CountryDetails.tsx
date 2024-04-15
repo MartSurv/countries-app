@@ -18,8 +18,6 @@ export const CountryDetails: React.FC<CountryDetailsProps> = ({ data }) => {
     return null;
   }
 
-  console.log(data);
-
   return (
     <article className={styles.detailsContainer}>
       <figure>

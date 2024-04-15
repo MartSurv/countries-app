@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../components/atoms/Header";
+import { Header } from "../../components/atoms/Header";
 import styles from "./Layout.module.scss";
 
 export const Layout: React.FC = () => {
