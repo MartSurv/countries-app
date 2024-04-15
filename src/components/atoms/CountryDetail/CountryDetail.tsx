@@ -1,7 +1,7 @@
 import styles from "./CountryDetail.module.scss";
 
 type CountryDetailProps = {
-  name: string;
+  name?: string;
   data?: string | number | string[] | number[];
 };
 
@@ -13,7 +13,6 @@ export const CountryDetail: React.FC<CountryDetailProps> = ({ data, name }) => {
       </p>
     );
   }
-
   return (
     <p className={styles.countryDetail}>
       <strong>{name}:</strong> {data}
