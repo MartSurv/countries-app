@@ -18,38 +18,52 @@ export const CountryDetails: React.FC<CountryDetailsProps> = ({ data }) => {
     return null;
   }
 
+  const {
+    borders,
+    capital,
+    currencies,
+    flags,
+    languages,
+    name,
+    population,
+    region,
+    subregion,
+    tld,
+  } = data;
+  const nativeName = name.nativeName[Object.keys(name.nativeName)[0]].common;
+
   return (
     <article className={styles.detailsContainer}>
       <figure>
-        <img className={styles.flag} src={data?.flags.svg} />
+        <img className={styles.flag} src={flags.svg} />
       </figure>
       <section className={styles.detailsSection}>
-        <h2 className={styles.detailsTitle}>{data?.name.common}</h2>
+        <h2 className={styles.detailsTitle}>{name.common}</h2>
         <div className={styles.detailsColumns}>
           <DetailsColumn>
-            {/* <CountryDetail data={data?.name.nativeName} name="Native Name" /> */}
-            <CountryDetail data={data?.population} name="Population" />
-            <CountryDetail data={data?.region} name="Region" />
-            <CountryDetail data={data?.subregion} name="Sub Region" />
-            <CountryDetail data={data?.capital} name="Capital" />
+            <CountryDetail data={nativeName} name="Native Name" />
+            <CountryDetail data={population} name="Population" />
+            <CountryDetail data={region} name="Region" />
+            <CountryDetail data={subregion} name="Sub Region" />
+            <CountryDetail data={capital} name="Capital" />
           </DetailsColumn>
           <DetailsColumn>
-            <CountryDetail data={data?.tld} name="Top Level Domain" />
+            <CountryDetail data={tld} name="Top Level Domain" />
             <CountryDetail
-              data={Object.keys(data?.currencies).map((currency) => currency)}
+              data={Object.keys(currencies).map((currency) => currency)}
               name="Currencies"
             />
             <CountryDetail
-              data={Object.keys(data?.languages).map((language) => language)}
+              data={Object.keys(languages).map((language) => language)}
               name="Languages"
             />
           </DetailsColumn>
         </div>
-        {data?.borders && (
+        {borders && (
           <div className={styles.borderCountriesContainer}>
             <CountryDetail name="Border Countries" />
             <div className={styles.borderCountries}>
-              {data.borders.map((border) => {
+              {borders.map((border) => {
                 return <BorderCountry to={border} name={border} />;
               })}
             </div>

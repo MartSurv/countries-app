@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { CountryDetails } from "../../components/molecules/CountryDetails";
+import arrowLeftSrc from "../../assets/images/arrow-left.svg";
 
 import styles from "./Country.module.scss";
 import useGetCountry from "../../hooks/useGetCountry";
@@ -10,9 +11,10 @@ export const Country: React.FC = () => {
 
   return (
     <div className={`${styles.pageWrapper} fade-in`}>
-      <header>
-        <Link to="/">Back</Link>
-      </header>
+      <Link className={styles.link} to="/">
+        <img src={arrowLeftSrc} />
+        <span className={styles.linkText}>Back</span>
+      </Link>
       <CountryDetails data={data[0]} />
     </div>
   );

@@ -1,5 +1,5 @@
 import styles from "./SearchInput.module.scss";
-import SearchIconSrc from "../../../assets/images/search.svg";
+import searchIconSrc from "../../../assets/images/search.svg";
 
 type SearchInputProps = {
   value?: string;
@@ -14,7 +14,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
     <div className={styles.inputWrapper}>
       <img
         className={styles.searchIcon}
-        src={SearchIconSrc}
+        src={searchIconSrc}
         alt="Search Image"
       />
       <input

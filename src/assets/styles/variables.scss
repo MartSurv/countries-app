@@ -6,6 +6,13 @@ $font-primary: "Nunito Sans", sans-serif;
 
 // Colors
 $color-white: #fff;
+$color-black: #000;
+$color-background: #fafafa;
 
 // Other
-$border-rounded: 5px;
+$border-radius-default: 5px;
+$box-shadow-default: 0px 2px 9px
+  rgba(
+    $color: $color-black,
+    $alpha: 0.05,
+  );

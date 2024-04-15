@@ -1,4 +1,4 @@
-import ArrowDownSrc from "../../../assets/images/arrow-down.svg";
+import arrowDownSrc from "../../../assets/images/arrow-down.svg";
 
 import styles from "./RegionSelect.module.scss";
 
@@ -26,7 +26,7 @@ export const RegionSelect: React.FC<RegionSelectProps> = ({
           return <option value={region}>{region}</option>;
         })}
       </select>
-      <img className={styles.iconArrowDown} src={ArrowDownSrc} alt="" />
+      <img className={styles.iconArrowDown} src={arrowDownSrc} alt="" />
     </div>
   );
 };

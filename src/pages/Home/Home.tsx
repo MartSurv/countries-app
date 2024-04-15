@@ -1,13 +1,9 @@
 import { RegionSelect } from "../../components/atoms/RegionSelect";
 import { SearchInput } from "../../components/atoms/SearchInput";
 import styles from "./Home.module.scss";
-
 import useGetAllCountries from "../../hooks/useGetAllCountries";
-
 import { useMemo, useState } from "react";
-
 import useDebounce from "../../hooks/useDebounce";
-
 import { CountriesList } from "../../components/molecules/CountriesList";
 
 export const Home: React.FC = () => {
@@ -17,11 +13,9 @@ export const Home: React.FC = () => {
   const filteredData = useMemo(
     () =>
       allCountries.filter(
-        (country) =>
-          country.region === selectedRegion &&
-          country.name.common
-            .toLowerCase()
-            .includes(debouncedSearchValue.toLowerCase())
+        ({ region, name }) =>
+          region === selectedRegion &&
+          name.common.toLowerCase().includes(debouncedSearchValue.toLowerCase())
       ),
     [allCountries, debouncedSearchValue, selectedRegion]
   );
