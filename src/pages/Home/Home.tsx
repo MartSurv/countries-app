@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
     <main className={styles.homeWrapper}>
       <div className={styles.searchWrapper}>
         <SearchInput />
-        <RegionSelect />
+        <RegionSelect data={data} />
       </div>
       <div className={styles.cardsWrapper}>
         {data.map((country) => {
