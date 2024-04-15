@@ -9,7 +9,7 @@ export const Country: React.FC = () => {
   const { data } = useGetCountry(code);
 
   return (
-    <div className={styles.pageWrapper}>
+    <div className={`${styles.pageWrapper} fade-in`}>
       <header>
         <Link to="/">Back</Link>
       </header>

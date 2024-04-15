@@ -1,18 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAllCountries } from "../api";
 
-import { useAppContext } from "../contexts/AppContext";
+import { Country } from "../types";
 
 const useGetAllCountries = () => {
-  const { countries, setCountries } = useAppContext();
+  const [data, setData] = useState<Country[]>([]);
 
   useEffect(() => {
-    getAllCountries().then((countries) => {
-      setCountries(countries);
+    getAllCountries().then((countries: Country[]) => {
+      setData(countries);
     });
-  }, [setCountries]);
+  }, [setData]);
 
-  return { data: countries };
+  return { data };
 };
 
 export default useGetAllCountries;

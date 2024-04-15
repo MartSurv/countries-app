@@ -1,23 +1,28 @@
 import ArrowDownSrc from "../../../assets/images/arrow-down.svg";
-import { Country } from "../../../types";
+
 import styles from "./RegionSelect.module.scss";
 
 type RegionSelectProps = {
-  data: Country[];
+  regions: string[];
+  onChange: React.ChangeEventHandler<HTMLSelectElement>;
 };
 
-export const RegionSelect: React.FC<RegionSelectProps> = ({ data }) => {
-  const uniqueRegions = [
-    ...new Set(data.map((country) => country.region)),
-  ].sort();
-
+export const RegionSelect: React.FC<RegionSelectProps> = ({
+  regions,
+  onChange,
+}) => {
   return (
     <div className={styles.selectWrapper}>
-      <select className={styles.select} id="region-select" name="region-select">
+      <select
+        className={styles.select}
+        id="region-select"
+        name="region-select"
+        onChange={onChange}
+      >
         <option value="" selected>
           Filter by Region
         </option>
-        {uniqueRegions.map((region) => {
+        {regions.map((region) => {
           return <option value={region}>{region}</option>;
         })}
       </select>
