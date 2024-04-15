@@ -1,3 +1,5 @@
+@import "./assets/styles/variables.scss";
+
 *,
 *::before,
 *::after {
@@ -9,7 +11,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: $font-primary;
   font-style: normal;
   font-optical-sizing: auto;
 }

@@ -1,17 +1,11 @@
-@mixin for-laptop {
-  @media (max-width: 1024px) {
-    @content;
-  }
-}
+// Spacing
+$spacing-default: 8px;
 
-@mixin for-tablet {
-  @media (max-width: 768px) {
-    @content;
-  }
-}
+// Fonts
+$font-primary: "Nunito Sans", sans-serif;
 
-@mixin for-mobile {
-  @media (max-width: 375px) {
-    @content;
-  }
-}
+// Colors
+$color-white: #fff;
+
+// Other
+$border-rounded: 5px;

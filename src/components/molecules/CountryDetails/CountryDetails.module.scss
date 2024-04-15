@@ -1,4 +1,5 @@
 @import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/media.scss";
 
 .detailsContainer {
   display: flex;
@@ -25,7 +26,7 @@
 .flag {
   height: 400px;
   width: 560px;
-  border-radius: 5px;
+  border-radius: $border-rounded;
   object-fit: cover;
 }
 
@@ -39,7 +40,7 @@
 .detailsColumn {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: $spacing-default;
 }
 
 .detailsTitle {
@@ -51,7 +52,7 @@
 .borderCountriesContainer {
   margin-top: 68px;
   display: flex;
-  gap: 8px;
+  gap: $spacing-default;
   flex-wrap: wrap;
   align-items: center;
 }
