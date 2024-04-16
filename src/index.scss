@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: $color-background;
+  background-color: $color-background-light;
 }
 
 img,
@@ -33,4 +33,26 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
+}
+
+.dark-mode-primary {
+  color: $color-text-light;
+  background-color: $color-background-dark-primary;
+
+  & .icon {
+    filter: invert(100%);
+  }
+}
+
+.dark-mode-secondary {
+  color: $color-text-light;
+  background-color: $color-background-dark-secondary;
+
+  & .icon {
+    filter: invert(100%);
+  }
+
+  &::placeholder {
+    color: $color-text-light;
+  }
 }

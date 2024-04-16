@@ -1,4 +1,7 @@
+import classNames from "classnames";
+
 import { CountryDetail } from "@components/atoms/CountryDetail";
+import { useAppContext } from "@contexts/AppContext";
 
 import styles from "./CountryCard.module.scss";
 import { Country } from "../../../types/country";
@@ -8,8 +11,14 @@ type CountryCardProps = {
 };
 
 export const CountryCard: React.FC<CountryCardProps> = ({ data }) => {
+  const { darkMode } = useAppContext();
+  const cardClassNames = classNames({
+    "dark-mode-secondary": darkMode,
+    [styles.cardWrapper]: true,
+  });
+
   return (
-    <article className={styles.cardWrapper}>
+    <article className={cardClassNames}>
       <figure>
         <img className={styles.flag} src={data?.flags.svg} />
         <figcaption></figcaption>

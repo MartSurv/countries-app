@@ -1,22 +1,30 @@
+import classNames from "classnames";
 import { Link, useParams } from "react-router-dom";
 
 import arrowLeftSrc from "@assets/images/arrow-left.svg";
+import { Loader } from "@components/atoms/Loader/Loader";
 import { CountryDetails } from "@components/molecules/CountryDetails";
+import { useAppContext } from "@contexts/AppContext";
 import useGetCountry from "@hooks/useGetCountry";
 
 import styles from "./Country.module.scss";
 
 export const Country: React.FC = () => {
   const { code } = useParams();
-  const { data } = useGetCountry(code);
+  const { data, loading } = useGetCountry(code);
+  const { darkMode } = useAppContext();
+  const linkClassNames = classNames({
+    "dark-mode-secondary": darkMode,
+    [styles.link]: true,
+  });
 
   return (
     <div className={`${styles.pageWrapper} fade-in`}>
-      <Link className={styles.link} to="/">
-        <img src={arrowLeftSrc} />
+      <Link className={linkClassNames} to="/">
+        <img className="icon" src={arrowLeftSrc} />
         <span className={styles.linkText}>Back</span>
       </Link>
-      <CountryDetails data={data[0]} />
+      {loading ? <Loader /> : <CountryDetails data={data[0]} />}
     </div>
   );
 };

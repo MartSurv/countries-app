@@ -10,11 +10,11 @@
       "@api/*": ["api/*"],
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
       "@router/*": ["router/*"],
       "@templates/*": ["templates/*"],
-      "@types/*": ["types/*"],
       "@utils/*": ["utils/*"]
     },
 

@@ -5,6 +5,7 @@
   height: 80px;
   box-shadow: $box-shadow-default;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: $color-white;
   padding: 0 80px;
@@ -21,4 +22,19 @@
   @include for-mobile {
     font-size: 18px;
   }
+}
+
+.darkModeTextWrapper {
+  display: flex;
+  color: inherit;
+  align-items: center;
+  gap: $spacing-default;
+  border: none;
+  background-color: inherit;
+  padding: $spacing-default;
+  cursor: pointer;
+}
+
+.darkModeText {
+  font-weight: 600;
 }

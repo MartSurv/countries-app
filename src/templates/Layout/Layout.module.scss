@@ -1,7 +1,8 @@
 @import "../../assets/styles/variables.scss";
 @import "../..//assets/styles/media.scss";
 
-.contentWrapper {
+.content {
+  min-height: calc(100vh - $header-height);
   padding: 0 80px;
 
   @include for-tablet {

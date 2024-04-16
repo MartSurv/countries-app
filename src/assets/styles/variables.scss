@@ -7,7 +7,11 @@ $font-primary: "Nunito Sans", sans-serif;
 // Colors
 $color-white: #fff;
 $color-black: #000;
-$color-background: #fafafa;
+$color-text-light: #fff;
+$color-text-dark: #2b3844;
+$color-background-light: #fafafa;
+$color-background-dark-primary: #202c36;
+$color-background-dark-secondary: #2b3844;
 
 // Other
 $border-radius-default: 5px;
@@ -16,3 +20,4 @@ $box-shadow-default: 0px 2px 9px
     $color: $color-black,
     $alpha: 0.05,
   );
+$header-height: 80px;

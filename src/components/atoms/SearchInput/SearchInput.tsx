@@ -1,4 +1,7 @@
+import classNames from "classnames";
+
 import searchIconSrc from "@assets/images/search.svg";
+import { useAppContext } from "@contexts/AppContext";
 
 import styles from "./SearchInput.module.scss";
 
@@ -11,6 +14,12 @@ export const SearchInput: React.FC<SearchInputProps> = ({
   value,
   onChange,
 }) => {
+  const { darkMode } = useAppContext();
+  const inputClassNames = classNames({
+    "dark-mode-secondary": darkMode,
+    [styles.input]: true,
+  });
+
   return (
     <div className={styles.inputWrapper}>
       <img
@@ -19,7 +28,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
         alt="Search Image"
       />
       <input
-        className={styles.input}
+        className={inputClassNames}
         name="search"
         placeholder="Search for a country..."
         type="text"

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 
+import { Loader } from "@components/atoms/Loader/Loader";
 import { RegionSelect } from "@components/atoms/RegionSelect";
 import { SearchInput } from "@components/atoms/SearchInput";
 import { CountriesList } from "@components/molecules/CountriesList";
@@ -10,7 +11,7 @@ import { filterCountries } from "@utils/country";
 import styles from "./Home.module.scss";
 
 export const Home: React.FC = () => {
-  const { data: allCountries } = useGetAllCountries();
+  const { data: allCountries, loading } = useGetAllCountries();
   const [selectedRegion, setSelectedRegion] = useState("");
   const [searchValue, debouncedSearchValue, setSearchValue] = useDebounce(300);
   const filteredData = useMemo(
@@ -32,12 +33,12 @@ export const Home: React.FC = () => {
   };
 
   return (
-    <main className={`${styles.homeWrapper} fade-in`}>
+    <div className={`${styles.homeWrapper} fade-in`}>
       <div className={styles.searchWrapper}>
         <SearchInput value={searchValue} onChange={handleSearch} />
         <RegionSelect regions={regions} onChange={handleRegionSelect} />
       </div>
-      <CountriesList data={filteredData} />
-    </main>
+      {loading ? <Loader /> : <CountriesList data={filteredData} />}
+    </div>
   );
 };
