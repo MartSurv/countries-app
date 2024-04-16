@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getAllCountries } from "../api";
 
-import { Country } from "../types";
+import { getAllCountries } from "@api/getAllCountries";
+
+import { Country } from "../types/country";
 
 const useGetAllCountries = () => {
   const [data, setData] = useState<Country[]>([]);

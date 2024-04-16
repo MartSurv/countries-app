@@ -1,9 +1,10 @@
 import { Link, useParams } from "react-router-dom";
-import { CountryDetails } from "../../components/molecules/CountryDetails";
-import arrowLeftSrc from "../../assets/images/arrow-left.svg";
+
+import arrowLeftSrc from "@assets/images/arrow-left.svg";
+import { CountryDetails } from "@components/molecules/CountryDetails";
+import useGetCountry from "@hooks/useGetCountry";
 
 import styles from "./Country.module.scss";
-import useGetCountry from "../../hooks/useGetCountry";
 
 export const Country: React.FC = () => {
   const { code } = useParams();

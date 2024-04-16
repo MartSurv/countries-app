@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Country } from "../../../types";
-import { CountryCard } from "../CountryCard";
 
 import styles from "./CountriesList.module.scss";
+import { Country } from "../../../types/country";
+import { CountryCard } from "../CountryCard";
 
 type CountriesListProps = {
   data: Country[];

@@ -1,6 +1,7 @@
+import { CountryDetail } from "@components/atoms/CountryDetail";
+
 import styles from "./CountryCard.module.scss";
-import { CountryDetail } from "../../atoms/CountryDetail";
-import { Country } from "../../../types";
+import { Country } from "../../../types/country";
 
 type CountryCardProps = {
   data: Country;

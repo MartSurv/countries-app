@@ -1,4 +1,4 @@
-import arrowDownSrc from "../../../assets/images/arrow-down.svg";
+import arrowDownSrc from "@assets/images/arrow-down.svg";
 
 import styles from "./RegionSelect.module.scss";
 

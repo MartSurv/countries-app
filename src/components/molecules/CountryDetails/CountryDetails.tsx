@@ -1,7 +1,8 @@
-import { Country } from "../../../types";
-import { BorderCountry } from "../../atoms/BorderCountry";
-import { CountryDetail } from "../../atoms/CountryDetail";
+import { BorderCountry } from "@components/atoms/BorderCountry";
+import { CountryDetail } from "@components/atoms/CountryDetail";
+
 import styles from "./CountryDetails.module.scss";
+import { Country } from "../../../types/country";
 
 const DetailsColumn: React.FC<{ children: React.ReactNode }> = ({
   children,

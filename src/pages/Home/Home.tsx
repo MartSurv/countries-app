@@ -1,22 +1,20 @@
-import { RegionSelect } from "../../components/atoms/RegionSelect";
-import { SearchInput } from "../../components/atoms/SearchInput";
-import styles from "./Home.module.scss";
-import useGetAllCountries from "../../hooks/useGetAllCountries";
 import { useMemo, useState } from "react";
-import useDebounce from "../../hooks/useDebounce";
-import { CountriesList } from "../../components/molecules/CountriesList";
+
+import { RegionSelect } from "@components/atoms/RegionSelect";
+import { SearchInput } from "@components/atoms/SearchInput";
+import { CountriesList } from "@components/molecules/CountriesList";
+import useDebounce from "@hooks/useDebounce";
+import useGetAllCountries from "@hooks/useGetAllCountries";
+import { filterCountries } from "@utils/country";
+
+import styles from "./Home.module.scss";
 
 export const Home: React.FC = () => {
   const { data: allCountries } = useGetAllCountries();
   const [selectedRegion, setSelectedRegion] = useState("");
   const [searchValue, debouncedSearchValue, setSearchValue] = useDebounce(300);
   const filteredData = useMemo(
-    () =>
-      allCountries.filter(
-        ({ region, name }) =>
-          region === selectedRegion &&
-          name.common.toLowerCase().includes(debouncedSearchValue.toLowerCase())
-      ),
+    () => filterCountries(allCountries, selectedRegion, debouncedSearchValue),
     [allCountries, debouncedSearchValue, selectedRegion]
   );
 
@@ -39,11 +37,7 @@ export const Home: React.FC = () => {
         <SearchInput value={searchValue} onChange={handleSearch} />
         <RegionSelect regions={regions} onChange={handleRegionSelect} />
       </div>
-      <CountriesList
-        data={
-          selectedRegion || debouncedSearchValue ? filteredData : allCountries
-        }
-      />
+      <CountriesList data={filteredData} />
     </main>
   );
 };

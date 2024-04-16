@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import styles from "./BorderCountry.module.scss";
 
 type BorderCountryProps = {

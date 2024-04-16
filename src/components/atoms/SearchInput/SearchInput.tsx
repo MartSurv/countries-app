@@ -1,5 +1,6 @@
+import searchIconSrc from "@assets/images/search.svg";
+
 import styles from "./SearchInput.module.scss";
-import searchIconSrc from "../../../assets/images/search.svg";
 
 type SearchInputProps = {
   value?: string;
