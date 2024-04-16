@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Link, useParams } from "react-router-dom";
 
 import arrowLeftSrc from "@assets/images/arrow-left.svg";
-import { ErrorMessage } from "@components/atoms/ErrorMessage/ErrorMessage";
+import { ErrorMessage } from "@components/atoms/ErrorMessage";
 import { Loader } from "@components/atoms/Loader/Loader";
 import { CountryDetails } from "@components/molecules/CountryDetails";
 import { useAppContext } from "@contexts/AppContext";

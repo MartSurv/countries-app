@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import { ErrorMessage } from "@components/atoms/ErrorMessage/ErrorMessage";
+import { ErrorMessage } from "@components/atoms/ErrorMessage";
 import { Loader } from "@components/atoms/Loader/Loader";
 import { RegionSelect } from "@components/atoms/RegionSelect";
 import { SearchInput } from "@components/atoms/SearchInput";
