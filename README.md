@@ -35,7 +35,6 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- SCSS
-- CSS Flex
-- TypeScript
+- CSS/SCSS
+- JavaScript/TypeScript
 - [React](https://reactjs.org/) - JS library
