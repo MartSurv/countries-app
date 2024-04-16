@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [countries-app]([https://your-live-site-url.com](https://surv-countries-app.netlify.app))
+- Live Site URL: [countries-app](https://surv-countries-app.netlify.app)
 
 ### Built with
 
