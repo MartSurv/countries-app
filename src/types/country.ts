@@ -75,7 +75,7 @@ type PostalCode = {
   regex: string;
 };
 
-export type Country = {
+type Country = {
   name: Name;
   tld: string[];
   cca2: string;
@@ -112,3 +112,5 @@ export type Country = {
   capitalInfo: CapitalInfo;
   postalCode: PostalCode;
 };
+
+export type { Country };
