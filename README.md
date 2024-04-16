@@ -38,3 +38,5 @@ Users should be able to:
 - CSS/SCSS
 - JavaScript/TypeScript
 - [React](https://reactjs.org/) - JS library
+- Yarn
+- Vite
