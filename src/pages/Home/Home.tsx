@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 
+import { ErrorMessage } from "@components/atoms/ErrorMessage/ErrorMessage";
 import { Loader } from "@components/atoms/Loader/Loader";
 import { RegionSelect } from "@components/atoms/RegionSelect";
 import { SearchInput } from "@components/atoms/SearchInput";
@@ -11,7 +12,7 @@ import { filterCountries } from "@utils/country";
 import styles from "./Home.module.scss";
 
 export const Home: React.FC = () => {
-  const { data: allCountries, loading } = useGetAllCountries();
+  const { error, data: allCountries, loading } = useGetAllCountries();
   const [selectedRegion, setSelectedRegion] = useState("");
   const [searchValue, debouncedSearchValue, setSearchValue] = useDebounce(300);
   const filteredData = useMemo(
@@ -38,6 +39,9 @@ export const Home: React.FC = () => {
         <SearchInput value={searchValue} onChange={handleSearch} />
         <RegionSelect regions={regions} onChange={handleRegionSelect} />
       </div>
+      {!loading && error && (
+        <ErrorMessage message="Error: Failed to fetch countries data. Try again later." />
+      )}
       {loading ? <Loader /> : <CountriesList data={filteredData} />}
     </div>
   );

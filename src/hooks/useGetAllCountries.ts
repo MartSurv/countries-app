@@ -7,15 +7,20 @@ import { Country } from "../types/country";
 const useGetAllCountries = () => {
   const [data, setData] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    getAllCountries().then((countries: Country[]) => {
-      setData(countries);
-      setLoading(false);
-    });
+    getAllCountries()
+      .then((countries: Country[]) => {
+        setData(countries);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError(true);
+      });
   }, [setData]);
 
-  return { data, loading };
+  return { error, data, loading };
 };
 
 export default useGetAllCountries;

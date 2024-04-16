@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import { Country } from "@pages/Country";
 import { Home } from "@pages/Home";
@@ -11,6 +11,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/country/:code", element: <Country /> },
+      { path: "*", element: <Navigate to="/" /> },
     ],
   },
 ]);
