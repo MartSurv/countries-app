@@ -27,6 +27,9 @@ export const RegionSelect: React.FC<RegionSelectProps> = ({
 
   return (
     <div className={styles.selectWrapper}>
+      <label className="visually-hidden" htmlFor="region-select">
+        Region Select
+      </label>
       <select
         className={selectClassNames}
         id="region-select"
