@@ -36,10 +36,14 @@ export const CountryDetails: React.FC<CountryDetailsProps> = ({ data }) => {
   return (
     <article className={styles.detailsContainer}>
       <figure>
-        <img className={styles.flag} src={flags.svg} />
+        <img
+          className={styles.flag}
+          src={flags.svg}
+          alt={`${name.common} flag`}
+        />
       </figure>
       <section className={styles.detailsSection}>
-        <h2 className={styles.detailsTitle}>{name.common}</h2>
+        <h3 className={styles.detailsTitle}>{name.common}</h3>
         <div className={styles.detailsColumns}>
           <DetailsColumn>
             <CountryDetail data={nativeName} name="Native Name" />

@@ -20,11 +20,15 @@ export const CountryCard: React.FC<CountryCardProps> = ({ data }) => {
   return (
     <article className={cardClassNames}>
       <figure>
-        <img className={styles.flag} src={data?.flags.svg} />
+        <img
+          className={styles.flag}
+          src={data?.flags.svg}
+          alt={`${data.name.common} flag`}
+        />
         <figcaption></figcaption>
       </figure>
       <section className={styles.countryInfoSection}>
-        <h2 className={styles.countryTitle}>{data.name.common}</h2>
+        <h3 className={styles.countryTitle}>{data.name.common}</h3>
         <div className={styles.countryDetails}>
           <CountryDetail data={data?.population} name="Population" />
           <CountryDetail data={data?.region} name="Region" />

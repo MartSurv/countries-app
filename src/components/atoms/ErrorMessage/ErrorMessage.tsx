@@ -5,5 +5,5 @@ type ErrorMessageProps = {
 };
 
 export const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
-  return <h2 className={styles.errorText}>{message}</h2>;
+  return <h3 className={styles.errorText}>{message}</h3>;
 };

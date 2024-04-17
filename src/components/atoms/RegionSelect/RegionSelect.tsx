@@ -40,7 +40,11 @@ export const RegionSelect: React.FC<RegionSelectProps> = ({
           return <option value={region}>{region}</option>;
         })}
       </select>
-      <img className={iconClassNames} src={arrowDownSrc} alt="" />
+      <img
+        className={iconClassNames}
+        src={arrowDownSrc}
+        alt="arrow down icon"
+      />
     </div>
   );
 };

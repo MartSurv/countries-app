@@ -22,7 +22,7 @@ export const Country: React.FC = () => {
   return (
     <div className={`${styles.pageWrapper} fade-in`}>
       <Link className={linkClassNames} to="/">
-        <img className="icon" src={arrowLeftSrc} />
+        <img className="icon" src={arrowLeftSrc} alt="arrow left icon" />
         <span className={styles.linkText}>Back</span>
       </Link>
       {!loading && error && (

@@ -25,7 +25,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
       <img
         className={styles.searchIcon}
         src={searchIconSrc}
-        alt="Search Image"
+        alt="search icon"
       />
       <input
         className={inputClassNames}
