@@ -25,9 +25,9 @@ export const Header: React.FC<HeaderProps> = ({ onDarkModeClick }) => {
         onClick={onDarkModeClick}
       >
         <img src={moonOutlinedSrc} alt="moon icon" />
-        <h3 className={styles.darkModeText}>
+        <span className={styles.darkModeText}>
           {darkMode ? "Light Mode" : "Dark Mode"}
-        </h3>
+        </span>
       </button>
     </header>
   );

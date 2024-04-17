@@ -28,7 +28,7 @@ export const CountryCard: React.FC<CountryCardProps> = ({ data }) => {
         <figcaption></figcaption>
       </figure>
       <section className={styles.countryInfoSection}>
-        <h3 className={styles.countryTitle}>{data.name.common}</h3>
+        <h2 className={styles.countryTitle}>{data.name.common}</h2>
         <div className={styles.countryDetails}>
           <CountryDetail data={data?.population} name="Population" />
           <CountryDetail data={data?.region} name="Region" />

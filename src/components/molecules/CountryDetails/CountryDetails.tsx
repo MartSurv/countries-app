@@ -43,7 +43,7 @@ export const CountryDetails: React.FC<CountryDetailsProps> = ({ data }) => {
         />
       </figure>
       <section className={styles.detailsSection}>
-        <h3 className={styles.detailsTitle}>{name.common}</h3>
+        <h2 className={styles.detailsTitle}>{name.common}</h2>
         <div className={styles.detailsColumns}>
           <DetailsColumn>
             <CountryDetail data={nativeName} name="Native Name" />
