@@ -1,7 +1,17 @@
+@import "../../../assets/styles/media.scss";
+
 .list {
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
+
+  @include for-laptop {
+    gap: 30px;
+  }
+  @include for-tablet {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .link {

@@ -10,6 +10,10 @@
   background-color: $color-white;
   padding: 0 80px;
 
+  @include for-tablet {
+    padding: 0 40px;
+  }
+
   @include for-mobile {
     padding: 0 16px;
   }

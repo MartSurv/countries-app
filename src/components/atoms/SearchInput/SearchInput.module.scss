@@ -2,6 +2,8 @@
 
 .inputWrapper {
   position: relative;
+  max-width: 480px;
+  width: 100%;
 }
 
 .searchIcon {
@@ -11,7 +13,7 @@
 }
 
 .input {
-  width: 480px;
+  width: 100%;
   padding: 18px 74px;
   border: none;
   box-shadow: $box-shadow-default;
