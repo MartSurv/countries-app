@@ -25,8 +25,7 @@ Users should be able to:
 
 ### Screenshots
 
-<img width="1726" alt="Screenshot 2024-04-16 at 16 37 14" src="https://github.com/MartSurv/countries-app/assets/47948087/b9e0f861-3ec4-47ea-8fb0-c66167fcfb08">
-<img width="1728" alt="Screenshot 2024-04-16 at 16 31 16" src="https://github.com/MartSurv/countries-app/assets/47948087/2a434d65-d7d6-47cb-8e1e-2620252de134">
+![smartmockups_lvb9dor9](https://github.com/MartSurv/countries-app/assets/47948087/97df3f2a-29ef-41ea-9cae-3ae1ba0d6ba7)
 
 ### Links
 
